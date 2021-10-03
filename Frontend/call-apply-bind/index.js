@@ -1,6 +1,6 @@
 let name = {
-  firstName: "Abhishek",
-  lastName: "Naidu",
+  firstName: "Bharat",
+  lastName: "Tyagi",
   printFullName: function () {
     console.log(this.firstName + " " + this.lastName);
   },
@@ -9,7 +9,7 @@ name.printFullName();
 
 let exampleForCall = {
   firstName: "Bongs",
-  lastName: "Nad",
+  lastName: "Tyagi",
 };
 
 // We want to print full name of object exampleForCall, so we can
@@ -22,8 +22,8 @@ name.printFullName.call(exampleForCall);
 // But most of the time we'll not have functions inside of an object, it needs to be declared separately like:
 
 let userInfo = {
-  firstName: "Abhishek",
-  lastName: "Naidu",
+  firstName: "Bharat",
+  lastName: "Tyagi",
 };
 
 let printFullName = function (hometown, state) {
@@ -32,12 +32,12 @@ let printFullName = function (hometown, state) {
   );
 };
 
-printFullName.call(userInfo, "Bilaspur", "Chattisgarh");
+printFullName.call(userInfo, "Agra", "Uttar Pradesh");
 
 // call(reference i.e this, comma separated values(arguments))
 // The difference between call and apply is just the arguements how it is passed. It's passed as an arrayList.
 
-printFullName.apply(userInfo, ["Bilaspur", "Chattisgarh"]);
+printFullName.apply(userInfo, ["Agra", "Uttar Pradesh"]);
 
 // TIP :
 // Call takes comma-separated values, can be remembered as `C's`
@@ -47,6 +47,6 @@ printFullName.apply(userInfo, ["Bilaspur", "Chattisgarh"]);
 // function which is being passed and also returns a new function
 // It just used to bind and keep a copy of that method and can be used it later.
 
-let printMyName = printFullName.bind(userInfo, "Bilaspur", "Chattisgarh");
+let printMyName = printFullName.bind(userInfo, "Agra", "Uttar Pradesh");
 // we'll need to invoke to see the results
 printMyName();
